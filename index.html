@@ -5,38 +5,47 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
   <title>Item Lister</title>
 </head>
-<body>
-  <header id="main-header" class="bg-success text-white p-4 mb-3">
+<body class="bg-dark">
+  <header id="main-header" class="text-white p-4 mb-3">
     <div class="container">
       <div class="row">
-        <div class="col-md-6">
-            <h1 id="header-title">Item Lister</h1>
+       
+        <div class="col-sm-6 align-self-center">
+            <input type="text" class="form-control bg-light" id="filter" placeholder="Search Items...">
         </div>
-        <div class="col-md-6 align-self-center">
-            <input type="text" class="form-control" id="filter" placeholder="Search Items...">
-        </div>
+        <br><br><br>
+        <div class="toggle_switch col-md-4 float-right">
+				<input type="checkbox" class="switch_3">
+				<svg class="checkbox" xmlns="http://www.w3.org/2000/svg" style="isolation:isolate" viewBox="0 0 168 80">
+				   <path class="outer-ring" d="M41.534 9h88.932c17.51 0 31.724 13.658 31.724 30.482 0 16.823-14.215 30.48-31.724 30.48H41.534c-17.51 0-31.724-13.657-31.724-30.48C9.81 22.658 24.025 9 41.534 9z" fill="none" stroke="#233043" stroke-width="3" stroke-linecap="square" stroke-miterlimit="3"/>
+				   <path class="is_checked" d="M17 39.482c0-12.694 10.306-23 23-23s23 10.306 23 23-10.306 23-23 23-23-10.306-23-23z"/>
+					<path class="is_unchecked" d="M132.77 22.348c7.705 10.695 5.286 25.617-5.417 33.327-2.567 1.85-5.38 3.116-8.288 3.812 7.977 5.03 18.54 5.024 26.668-.83 10.695-7.706 13.122-22.634 5.418-33.33-5.855-8.127-15.88-11.474-25.04-9.23 2.538 1.582 4.806 3.676 6.66 6.25z"/>
+				</svg>
+			  </div>
       </div>
     </div>
   </header>
   <div class="container">
-   <div id="main" class="card card-body">
-    <h2 class="title">Add Items</h2>
+   <div id="main" class="card card-body bg-dark">
+    <h2 class="title text-muted">Add Items</h2>
     <form id="addForm" class="form-inline mb-3">
-      <input type="text" class="form-control mr-2" id="item">
-      <input type="submit" class="btn btn-dark" value="Submit">
+      <input type="text" class="form-control mr-2 bg-light" id="item">
+      <input type="submit" class="btn btn-secondary" value="Submit" id="submit">
     </form>
-    <h2 class="title">Items</h2>
+    <h2 class="title text-muted">Items</h2>
     <ul id="items" class="list-group">
-      <li class="list-group-item">Item 1 <button class="btn btn-danger btn-sm float-right delete">X</button></li>
+      <li class="list-group-item bg-secondary text-light">Potato<button class="btn btn-danger btn-sm float-right delete">X</button></li>
+<!--
       <li class="list-group-item">Item 2 <button class="btn btn-danger btn-sm float-right delete">X</button></li>
       <li class="list-group-item">Item 3 <button class="btn btn-danger btn-sm float-right delete">X</button></li>
       <li class="list-group-item">Item 4 <button class="btn btn-danger btn-sm float-right delete">X</button></li>
+-->
     </ul>
    </div>
   </div>
-
   <script src="dom.js"></script>
 </body>
 </html>
